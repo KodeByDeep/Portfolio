@@ -79,7 +79,7 @@ Designed specifically for:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/Deep4755/portfolio
+git clone https://github.com/KodeByDeep/Portfolio
 cd portfolio/Frontend
 ```
 

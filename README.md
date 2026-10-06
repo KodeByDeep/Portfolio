@@ -121,7 +121,7 @@ Frontend/
 Full-Stack MERN Developer
 
 - **Email:** sandeep8837505136@gmail.com
-- **LinkedIn:** [linkedin.com/in/sandeep-kaur-61b4232b7](https://www.linkedin.com/in/sandeep-kaur-61b4232b7/)
+- **LinkedIn:** [linkedin.com/in/sandeep-kaur-dev](https://www.linkedin.com/in/sandeep-kaur-dev/)
 - **GitHub:** [github.com/KodeByDeep](https://github.com/KodeByDeep)
 
 ---

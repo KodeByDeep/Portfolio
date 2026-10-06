@@ -14,11 +14,11 @@ Designed specifically for:
 - Freelance client acquisition
 - Job opportunity presentations
 - Professional networking
-- Technical skill demonstrationDeep4755/quick_break
+- Technical skill demonstrationKodeByDeep/QuickBreak
 
 ---
 
-## FeaturesDeep4755/quick_break
+## FeaturesKodeByDeep/QuickBreak
 
 - **Responsive Design** - Optimized for all devices and screen sizes
 - **Modern UI/UX** - Clean, professional interface with smooth animations
@@ -55,7 +55,7 @@ Designed specifically for:
 **Motorway Service Station Finder (Final-Year Dissertation)**
 
 - **Live Demo:** [https://quick-break-backend.onrender.com](https://quick-break-backend.onrender.com)
-- **GitHub:** [https://github.com/Deep4755/quick_break](https://github.com/Deep4755/quick_break)
+- **GitHub:** [https://github.com/KodeByDeep/QuickBreak](https://github.com/KodeByDeep/QuickBreak)
 - **Tech:** React, Node.js, Express, MongoDB, TomTom Maps & Routing APIs, JWT authentication
 - **Description:** Full-stack app helping UK drivers find service stations, view facilities, read reviews and navigate, with a rule-based voice assistant (Bexxa)
 

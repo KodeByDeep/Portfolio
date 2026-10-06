@@ -52,11 +52,12 @@ Designed specifically for:
 ## Featured Projects
 
 ### 1. QuickBreak
-**AI-Powered Motorway Service Finder**
+**Motorway Service Station Finder (Final-Year Dissertation)**
+
 - **Live Demo:** [https://quick-break-backend.onrender.com](https://quick-break-backend.onrender.com)
 - **GitHub:** [https://github.com/Deep4755/quick_break](https://github.com/Deep4755/quick_break)
-- **Tech:** MERN Stack, OpenAI API, MapBox API
-- **Description:** Real-time location-based service finder with AI integration
+- **Tech:** React, Node.js, Express, MongoDB, TomTom Maps & Routing APIs, JWT authentication
+- **Description:** Full-stack app helping UK drivers find service stations, view facilities, read reviews and navigate, with a rule-based voice assistant (Bexxa)
 
 *Note: Initial load may take 30-60 seconds due to free hosting service.*
 

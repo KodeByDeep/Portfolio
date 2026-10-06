@@ -14,11 +14,11 @@ Designed specifically for:
 - Freelance client acquisition
 - Job opportunity presentations
 - Professional networking
-- Technical skill demonstration
+- Technical skill demonstrationDeep4755/quick_break
 
 ---
 
-## Features
+## FeaturesDeep4755/quick_break
 
 - **Responsive Design** - Optimized for all devices and screen sizes
 - **Modern UI/UX** - Clean, professional interface with smooth animations

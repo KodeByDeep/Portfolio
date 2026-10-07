@@ -39,22 +39,85 @@ export const HOME_FEATURED_IDS = ['local-carpet-fitter', 'virk-carpet', 'quickbr
 // ── About ─────────────────────────────────────────────────────
 export const ABOUT = {
   name: 'Sandeep Kaur',
-  tagline: 'Full-Stack MERN Developer',
-  availability: 'Available for new opportunities',
-  heroBody: 'I help businesses build high-performing websites and web applications that generate leads, improve user experience, and drive real growth.',
+  tagline: 'Junior Full Stack Developer',
+  availability: 'Open to junior developer roles',
+  heroBody: 'Computer Science graduate (First Class, 88%) building websites and web apps with React, Next.js, TypeScript and Node.js.',
+  bio: [
+    "I'm Sandeep, a junior full stack developer based in West London. I graduated from the University of East London in 2026 with a First Class degree in Computer Science (88%).",
+    "I enjoy front-end work the most, turning a design into a site that is fast, clear and easy to use. I'm also comfortable on the back end, building APIs, user login and databases. For my dissertation I built QuickBreak, a full stack app for UK drivers, and took it from an idea to a live site.",
+    "Alongside my degree I built websites for two local businesses and worked part-time in customer service for over three years, so I'm used to real clients, real deadlines and real feedback. I'm now looking for a junior web developer role in London or remote, where I can keep learning from a good team.",
+  ],
+  experience: [
+    {
+      role: 'Freelance Web Developer',
+      org: 'Self-employed, London',
+      period: 'Jun 2025 – Present',
+      bullets: [
+        'Built and launched websites for Virk Carpet & Flooring (Next.js, TypeScript) and Local Carpet Fitter (JavaScript, PHP).',
+        'Handled design, hosting, domains and local SEO for both.',
+      ],
+    },
+    {
+      role: 'Customer Service Assistant',
+      org: 'Quality Foods Supermarket, Hounslow',
+      period: 'Oct 2022 – Feb 2026',
+      bullets: [
+        'Part-time alongside my degree for over three years.',
+        'Served customers daily, handled questions and complaints, and kept the till accurate on busy shifts.',
+      ],
+    },
+  ],
   education: {
-    degree: 'BSc Computer Science',
+    degree: 'BSc (Hons) Computer Science',
     institution: 'University of East London',
     years: '2022–2026',
     grade: 'First Class Honours (88%)',
+    dissertation: 'QuickBreak (73%)',
+    modules: [
+      { name: 'Computer and Network Security',        pct: 99 },
+      { name: 'Web and Mobile Application Dev',       pct: 94 },
+      { name: 'Data Structures and Algorithms',       pct: 92 },
+      { name: 'Mobile and Distributed Systems',       pct: 90 },
+      { name: 'Advanced Programming',                 pct: 89 },
+      { name: 'Artificial Intelligence',              pct: 87 },
+    ],
   },
-  traineeship: 'IT Career Switch cyber security traineeship',
-  languages: ['English', 'Punjabi', 'Hindi', 'Urdu'],
-  bio: [
-    'TODO: short intro paragraph about yourself (2–3 sentences).',
-    'TODO: what drives you as a developer — what you enjoy, what kind of work you want to do.',
-    'TODO: one sentence about where you are based and what you are looking for.',
+  training: [
+    {
+      org: 'IT Career Switch (2026)',
+      detail: 'CCNA 200-301, CompTIA A+ and CompTIA Tech+ training completed. Currently studying for Network+.',
+    },
+    {
+      org: 'Cisco Networking Academy',
+      detail: 'JavaScript Essentials 1 and 2.',
+    },
   ],
+  skillGroups: [
+    {
+      label: 'Front end',
+      skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+    },
+    {
+      label: 'Back end',
+      skills: ['Node.js', 'Express', 'REST APIs', 'JWT authentication', 'PHP'],
+    },
+    {
+      label: 'Databases',
+      skills: ['MongoDB', 'Mongoose', 'Oracle SQL'],
+    },
+    {
+      label: 'Tools',
+      skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'Vite', 'Render', 'Vercel', 'Hostinger'],
+    },
+    {
+      label: 'Also',
+      skills: ['Solidity', 'Hardhat', 'Java (basic)', 'Python (basic)', 'Networking & security fundamentals'],
+    },
+  ],
+  traineeship: 'IT Career Switch cyber security traineeship (2026): CCNA 200-301, CompTIA A+ and Tech+ completed.',
+  languages: ['English', 'Punjabi', 'Hindi', 'Urdu'],
+  cvPath: '/Sandeep-Kaur-CV-Developer.pdf',
+  location: 'Iver, Bucks (West London)',
 };
 
 // ── Tech stack ────────────────────────────────────────────────

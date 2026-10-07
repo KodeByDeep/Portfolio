@@ -11,7 +11,7 @@ function HomePage() {
       <Hero />
 
       {/* ── Proof points ──────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-6 pb-20">
+      <section className="mx-auto max-w-7xl px-6 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {HOME.proofPoints.map(({ stat, detail }) => (
             <div

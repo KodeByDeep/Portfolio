@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+/* ── Blinking cursor ──────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-start infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink { animation: none; opacity: 1; }
+}
+
+/* ── Floating icon animations ─────────────────────────────── */
+
+/* Each icon drifts up/down, rotates in 3-D, and fades — all at once */
+@keyframes float-a {
+  0%   { transform: translateY(0px)   translateZ(0px)  rotateY(0deg)   rotateX(0deg);   opacity: 0.18; }
+  25%  { transform: translateY(-22px) translateZ(20px) rotateY(40deg)  rotateX(10deg);  opacity: 0.30; }
+  50%  { transform: translateY(-10px) translateZ(40px) rotateY(80deg)  rotateX(-8deg);  opacity: 0.22; }
+  75%  { transform: translateY(-28px) translateZ(10px) rotateY(130deg) rotateX(6deg);   opacity: 0.28; }
+  100% { transform: translateY(0px)   translateZ(0px)  rotateY(180deg) rotateX(0deg);   opacity: 0.18; }
+}
+
+@keyframes float-b {
+  0%   { transform: translateY(0px)   translateZ(0px)  rotateY(0deg)   rotateX(0deg);   opacity: 0.15; }
+  30%  { transform: translateY(-18px) translateZ(30px) rotateY(-50deg) rotateX(-12deg); opacity: 0.25; }
+  60%  { transform: translateY(-30px) translateZ(15px) rotateY(-100deg)rotateX(8deg);   opacity: 0.20; }
+  100% { transform: translateY(0px)   translateZ(0px)  rotateY(-180deg)rotateX(0deg);   opacity: 0.15; }
+}
+
+@keyframes float-c {
+  0%   { transform: translateY(0px)   rotateZ(0deg)   rotateX(0deg);   opacity: 0.20; }
+  40%  { transform: translateY(-24px) rotateZ(25deg)  rotateX(15deg);  opacity: 0.32; }
+  80%  { transform: translateY(-12px) rotateZ(-15deg) rotateX(-10deg); opacity: 0.22; }
+  100% { transform: translateY(0px)   rotateZ(0deg)   rotateX(0deg);   opacity: 0.20; }
+}
+
+@keyframes drift-slow {
+  0%   { transform: translate(0px, 0px)    rotate(0deg); }
+  33%  { transform: translate(12px, -16px) rotate(8deg); }
+  66%  { transform: translate(-8px, -22px) rotate(-5deg); }
+  100% { transform: translate(0px, 0px)    rotate(0deg); }
+}
+
+.anim-float-a { animation: float-a linear infinite; }
+.anim-float-b { animation: float-b linear infinite; }
+.anim-float-c { animation: float-c ease-in-out infinite; }
+.anim-drift   { animation: drift-slow ease-in-out infinite; }

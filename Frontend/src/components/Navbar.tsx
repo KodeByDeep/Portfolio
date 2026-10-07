@@ -1,17 +1,9 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { NAV_LINKS } from '../data/content'
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const links = [
-    { href: '#home', label: 'Home' },
-    { href: '#techstack', label: 'Tech Stack' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#services', label: 'Services' },
-    { href: '#why-choose-me', label: 'Why Me' },
-    { href: '#contact', label: 'Contact' },
-  ]
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   return (
     <header className="fixed top-0 w-full z-50 bg-neutral-950/90 backdrop-blur-md border-b border-white/10">
@@ -22,7 +14,7 @@ function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {links.map(link => (
+          {NAV_LINKS.map(link => (
             <a
               key={link.href}
               href={link.href}
@@ -54,7 +46,7 @@ function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-neutral-950/95 backdrop-blur-md border-t border-white/10 px-6 py-4 flex flex-col gap-4">
-          {links.map(link => (
+          {NAV_LINKS.map(link => (
             <a
               key={link.href}
               href={link.href}

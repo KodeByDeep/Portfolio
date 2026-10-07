@@ -1,25 +1,4 @@
-import { AppWindow, CodeXml, Laptop } from "lucide-react";
-
-const services = [
-  {
-    icon: Laptop,
-    color: 'text-cyan-400',
-    title: 'Business Websites',
-    desc: 'High-performance, responsive websites tailored for local businesses to drive conversion and digital presence.',
-  },
-  {
-    icon: AppWindow,
-    color: 'text-emerald-400',
-    title: 'Full-Stack Web Apps',
-    desc: 'Complex, data-driven web applications built with scalable MERN stack architecture and intuitive UIs.',
-  },
-  {
-    icon: CodeXml,
-    color: 'text-yellow-400',
-    title: 'API Development',
-    desc: 'Secure, fast, and robust RESTful APIs built with Node.js and Express to power modern frontends.',
-  },
-]
+import { SERVICES } from '../data/content'
 
 function Services() {
   return (
@@ -34,7 +13,7 @@ function Services() {
       </div>
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map(({ icon: Icon, color, title, desc }) => (
+        {SERVICES.map(({ icon: Icon, color, title, desc }) => (
           <div key={title} className="rounded-3xl border border-white/10 bg-white/5 p-8 hover:bg-white/10 transition-all duration-300">
             <div className='mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5'>
               <Icon size={26} className={color} />

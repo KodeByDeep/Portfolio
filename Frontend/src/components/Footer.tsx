@@ -1,4 +1,5 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from 'lucide-react'
+import { SOCIAL } from '../data/content'
 
 function Footer() {
   return (
@@ -10,12 +11,12 @@ function Footer() {
         </div>
 
         <p className="text-sm text-white/50 text-center">
-          © {new Date().getFullYear()} Sandeep Kaur. All rights reserved.
+          &copy; {new Date().getFullYear()} Sandeep Kaur. All rights reserved.
         </p>
 
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/Deep4755"
+            href={SOCIAL.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub profile"
@@ -24,7 +25,7 @@ function Footer() {
             <Github size={22} />
           </a>
           <a
-            href="https://www.linkedin.com/in/sandeep-kaur-61b4232b7/"
+            href={SOCIAL.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"

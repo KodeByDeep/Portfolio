@@ -1,4 +1,5 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin } from 'lucide-react'
+import { SOCIAL } from '../data/content'
 
 function Contact() {
   return (
@@ -16,7 +17,7 @@ function Contact() {
 
           <div className='mt-10 space-y-6'>
             <a
-              href="mailto:sandeep8837505136@gmail.com"
+              href={`mailto:${SOCIAL.email}`}
               className='flex items-center gap-4 text-white hover:opacity-80 transition-opacity duration-200'
             >
               <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5'>
@@ -24,12 +25,12 @@ function Contact() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs text-white/50">Email</p>
-                <p className="text-sm sm:text-base text-white truncate">sandeep8837505136@gmail.com</p>
+                <p className="text-sm sm:text-base text-white truncate">{SOCIAL.email}</p>
               </div>
             </a>
 
             <a
-              href="https://github.com/Deep4755"
+              href={SOCIAL.github}
               target="_blank"
               rel="noopener noreferrer"
               className='flex items-center gap-4 text-white hover:opacity-80 transition-opacity duration-200'
@@ -39,12 +40,12 @@ function Contact() {
               </div>
               <div>
                 <p className="text-xs text-white/50">GitHub</p>
-                <p className="text-sm sm:text-base text-white">github.com/Deep4755</p>
+                <p className="text-sm sm:text-base text-white">github.com/KodeByDeep</p>
               </div>
             </a>
 
             <a
-              href="https://www.linkedin.com/in/sandeep-kaur-61b4232b7/"
+              href={SOCIAL.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className='flex items-center gap-4 text-white hover:opacity-80 transition-opacity duration-200'
@@ -54,7 +55,7 @@ function Contact() {
               </div>
               <div>
                 <p className="text-xs text-white/50">LinkedIn</p>
-                <p className="text-sm sm:text-base text-white">linkedin.com/in/sandeep-kaur</p>
+                <p className="text-sm sm:text-base text-white">linkedin.com/in/sandeep-kaur-dev</p>
               </div>
             </a>
           </div>
@@ -84,13 +85,13 @@ function Contact() {
             <label className="mb-2 block text-sm text-white" htmlFor="message">Message</label>
             <textarea
               id='message'
-              rows="6"
+              rows={6}
               placeholder='Tell me about your project'
               className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white text-sm placeholder:text-white/30 outline-none focus:border-emerald-400 transition-colors resize-none"
             />
           </div>
           <button
-            type="button"
+            type="submit"
             className="w-full rounded-2xl bg-gradient-to-r from-emerald-400 to-cyan-400 px-6 py-4 text-base font-semibold text-black hover:from-emerald-500 hover:to-cyan-500 transition-all duration-200"
             aria-label="Send message to Sandeep Kaur"
           >

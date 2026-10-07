@@ -1,10 +1,11 @@
-import { ExternalLink, Github } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ExternalLink, Github, ArrowRight } from 'lucide-react'
 import { PROJECTS, type Project } from '../data/content'
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 flex flex-col">
-      <div className="relative">
+    <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 flex flex-col group">
+      <div className="relative overflow-hidden">
         <div className="absolute top-4 left-4 z-10">
           <span className={`rounded-full ${project.badgeColor} px-3 py-1 text-xs font-semibold text-black`}>
             {project.badge}
@@ -13,7 +14,7 @@ function ProjectCard({ project }: { project: Project }) {
         <img
           src={project.image}
           alt={project.imageAlt}
-          className="h-52 sm:h-64 w-full object-cover"
+          className="h-52 sm:h-64 w-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
       </div>
@@ -28,6 +29,13 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
         <div className="mt-6 flex gap-3">
+          <Link
+            to={`/projects/${project.id}`}
+            className="flex-1 flex items-center justify-center gap-2 rounded-2xl border border-emerald-400/40 bg-emerald-400/10 px-4 py-3 text-center text-sm font-semibold text-emerald-400 hover:bg-emerald-400/20 transition-colors duration-200"
+          >
+            <ArrowRight size={15} />
+            Details
+          </Link>
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -59,11 +67,11 @@ function ProjectCard({ project }: { project: Project }) {
 const clientProjects = PROJECTS.filter(p => p.category === 'client')
 const practiceProjects = PROJECTS.filter(p => p.category !== 'client')
 
-function Projects() {
+function ProjectsPage() {
   return (
-    <section id="projects" className="mx-auto max-w-7xl px-6 py-20">
+    <section className="mx-auto max-w-7xl px-6 pt-32 pb-20">
       <div className="max-w-2xl">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Featured Projects</h2>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Projects</h1>
         <p className="mt-4 text-base sm:text-lg leading-8 text-white/70">
           A selection of my recent full-stack applications and freelance projects.
         </p>
@@ -71,7 +79,7 @@ function Projects() {
 
       {/* Client Work */}
       <div className="mt-12">
-        <h3 className="mb-6 text-lg font-semibold text-emerald-400 uppercase tracking-widest">Client Work</h3>
+        <h2 className="mb-6 text-lg font-semibold text-emerald-400 uppercase tracking-widest">Client Work</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {clientProjects.map(project => (
             <ProjectCard key={project.id} project={project} />
@@ -81,7 +89,7 @@ function Projects() {
 
       {/* Practice Projects */}
       <div className="mt-16">
-        <h3 className="mb-6 text-lg font-semibold text-white/50 uppercase tracking-widest">Practice Projects</h3>
+        <h2 className="mb-6 text-lg font-semibold text-white/50 uppercase tracking-widest">Design &amp; Concept</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {practiceProjects.map(project => (
             <ProjectCard key={project.id} project={project} />
@@ -92,4 +100,4 @@ function Projects() {
   )
 }
 
-export default Projects
+export default ProjectsPage

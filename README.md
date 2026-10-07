@@ -1,102 +1,101 @@
-# Sandeep Kaur - Full-Stack MERN Developer Portfolio
+# Sandeep Kaur — Junior Full Stack Developer Portfolio
 
-A modern, professional portfolio website showcasing my expertise in full-stack web development. Built to attract freelance clients and demonstrate real-world project capabilities to potential employers.
+Personal portfolio website built with React, TypeScript and Tailwind CSS. Shows my projects, skills, experience and background, and has a working contact form via EmailJS.
 
 **[View Live Portfolio →](https://codebydeep-co-uk-913554.hostingersite.com/)**
 
 ---
 
-## About This Portfolio
+## About
 
-This portfolio represents my commitment to building high-performing web applications that drive business growth. It features real, deployed projects and demonstrates my ability to deliver scalable solutions using modern technologies.
-
-Designed specifically for:
-- Freelance client acquisition
-- Job opportunity presentations
-- Professional networking
-- Technical skill demonstrationKodeByDeep/QuickBreak
-
----
-
-## FeaturesKodeByDeep/QuickBreak
-
-- **Responsive Design** - Optimized for all devices and screen sizes
-- **Modern UI/UX** - Clean, professional interface with smooth animations
-- **Live Project Showcase** - Real applications currently in production
-- **Performance Optimized** - Fast loading with lazy loading and efficient code
-- **SEO Ready** - Proper meta tags and semantic HTML structure
-- **Accessibility Compliant** - WCAG guidelines followed for inclusive design
+I'm a junior full stack developer based in West London. I graduated from the University of East London in 2026 with a First Class degree in Computer Science (88%). This portfolio covers my client work, university projects and practice builds.
 
 ---
 
 ## Tech Stack
 
 **Frontend:**
-- React 19.2.0
-- JavaScript (ES6+)
-- Tailwind CSS 4.2.1
-- Vite (Build tool)
+- React 19 + TypeScript
+- Tailwind CSS 4
+- React Router DOM
+- React Icons (`react-icons/si` for brand icons)
+- Lucide React
 
-**Backend & Database:**
-- Node.js
-- Express.js
-- MongoDB
-
-**Development Tools:**
+**Build tools:**
+- Vite 7
 - ESLint
-- Git & GitHub
-- Responsive Design Principles
+
+**Contact form:**
+- EmailJS (`@emailjs/browser`)
+
+---
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — hero, proof points, selected work, CTA |
+| `/projects` | All projects with All / Client / University / Concept filter |
+| `/projects/:slug` | Project detail — overview, role, features, challenges, tech |
+| `/about` | Bio, experience timeline, education, training, skills, languages |
+| `/contact` | EmailJS contact form with validation |
 
 ---
 
 ## Featured Projects
 
-### 1. QuickBreak
-**Motorway Service Station Finder (Final-Year Dissertation)**
+### Local Carpet Fitter — Client Work
+- **Live:** [localcarpetfitter.co.uk](https://localcarpetfitter.co.uk)
+- **Tech:** JavaScript, PHP
+- Service and area pages, gallery, quote form, local SEO
 
-- **Live Demo:** [https://quick-break-backend.onrender.com](https://quick-break-backend.onrender.com)
-- **GitHub:** [https://github.com/KodeByDeep/QuickBreak](https://github.com/KodeByDeep/QuickBreak)
-- **Tech:** React, Node.js, Express, MongoDB, TomTom Maps & Routing APIs, JWT authentication
-- **Description:** Full-stack app helping UK drivers find service stations, view facilities, read reviews and navigate, with a rule-based voice assistant (Bexxa)
+### Virk Carpet & Flooring — Client Work
+- **Live:** [virkcarpet.co.uk](https://virkcarpet.co.uk)
+- **Tech:** Next.js, TypeScript
+- WhatsApp chat, quote form, local SEO for Hayes
 
-*Note: Initial load may take 30-60 seconds due to free hosting service.*
+### QuickBreak — Dissertation
+- **Live:** [quick-break-backend.onrender.com](https://quick-break-backend.onrender.com)
+- **GitHub:** [github.com/KodeByDeep/QuickBreak](https://github.com/KodeByDeep/QuickBreak)
+- **Tech:** React, Node.js, Express, MongoDB, Tailwind CSS, TomTom APIs
+- Motorway service station finder for UK drivers. Map search, facility filters, reviews, favourites, JWT auth, Bexxa voice assistant. Deployed on Render.
 
-### 2. Local Carpet Fitter
-**Professional Business Website**
-- **Live Demo:** [https://localcarpetfitter.co.uk](https://localcarpetfitter.co.uk)
-- **Tech:** React, Tailwind CSS, Express, MongoDB
-- **Description:** SEO-optimized business website designed to increase customer enquiries
+> First load may take 30–60 seconds (free Render tier spins down when idle).
 
 ---
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn package manager
+- Node.js 18+
+- npm
 
-### Installation
+### Install and run
 
-1. Clone the repository
 ```bash
 git clone https://github.com/KodeByDeep/Portfolio
 cd Portfolio/Frontend
-```
-
-2. Install dependencies
-```bash
 npm install
-```
-
-3. Start development server
-```bash
 npm run dev
 ```
 
-4. Build for production
+### Build for production
+
 ```bash
 npm run build
 ```
+
+### Environment variables
+
+Create `Frontend/.env` (copy from `.env.example`):
+
+```
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+Get these from [emailjs.com](https://www.emailjs.com) — free account, 200 emails/month.
 
 ---
 
@@ -104,26 +103,35 @@ npm run build
 
 ```
 Frontend/
+├── public/
+│   ├── images/
+│   │   └── sandeep.jpg          # Profile photo
+│   ├── Sandeep-Kaur-CV-Developer.pdf
+│   ├── .htaccess                # Apache SPA redirect (Hostinger)
+│   └── _redirects               # Netlify-style redirect fallback
 ├── src/
-│   ├── components/     # Reusable UI components
-│   ├── assets/         # Images and static files
-│   ├── data/          # Portfolio data and content
-│   └── styles/        # CSS and styling files
-├── public/            # Public assets
-└── package.json       # Dependencies and scripts
+│   ├── components/              # Navbar, Footer, Layout, Hero, CodeCard, FloatingIcons …
+│   ├── pages/                   # HomePage, ProjectsPage, ProjectDetailPage, AboutPage, ContactPage
+│   └── data/
+│       └── content.ts           # All site text — projects, skills, bio, links
+└── .env.example
 ```
+
+---
+
+## Deployment
+
+Hosted on Hostinger. The `public/.htaccess` file handles SPA routing so direct URLs and page refreshes work correctly.
 
 ---
 
 ## Contact
 
-**Sandeep Kaur**  
-Full-Stack MERN Developer
+**Sandeep Kaur — Junior Full Stack Developer**
 
-- **Email:** sandeep8837505136@gmail.com
-- **LinkedIn:** [linkedin.com/in/sandeep-kaur-dev](https://www.linkedin.com/in/sandeep-kaur-dev/)
+- **Email:** [kaur.teck@gmail.com](mailto:kaur.teck@gmail.com)
+- **LinkedIn:** [linkedin.com/in/sandeep-kaur-dev](https://www.linkedin.com/in/sandeep-kaur-dev)
 - **GitHub:** [github.com/KodeByDeep](https://github.com/KodeByDeep)
+- **Location:** West London
 
----
-
-**Available for freelance projects and full-time opportunities.**
+Open to junior developer roles in London or remote, and freelance website work.
